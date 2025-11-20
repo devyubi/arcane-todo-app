@@ -2,6 +2,8 @@
 ![alt text](<Frame 2717.png>)
 React + Next.js + TypeScript + React Query + Zustand + Supabase 기반 Todo 작업 관리 앱 서비스 입니다.
 
+[arcane-todo-app](https://arcane-todo-app.vercel.app/)
+
 ## 프로젝트 개요
 
 arcane-todo-app 은 주어진 과제 요구사항을 충족하며,  
