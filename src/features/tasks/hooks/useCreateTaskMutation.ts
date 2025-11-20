@@ -28,6 +28,9 @@ export function useCreateTaskMutation() {
         dueDate: newTaskInputData.dueDate ?? null,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
+
+        description: newTaskInputData.description ?? "",
+        priority: newTaskInputData.priority ?? "medium",
       };
 
       queryClient.setQueryData<Task[]>(
