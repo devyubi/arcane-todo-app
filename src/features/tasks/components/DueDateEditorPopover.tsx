@@ -22,7 +22,7 @@ export default function DueDateEditorPopover({
   const [open, setOpen] = useState(false);
   const { mutate: updateTask } = useUpdateTaskMutation();
 
-  /** 날짜 선택 */
+  // 날짜 선택
   const handleSelectDate = useCallback(
     (date: Date | undefined) => {
       if (!date) return;
@@ -37,7 +37,7 @@ export default function DueDateEditorPopover({
     [task.id, updateTask]
   );
 
-  /** 날짜 제거 */
+  // 날짜 제거
   const handleRemoveDate = useCallback(() => {
     updateTask({
       id: task.id,
@@ -47,7 +47,7 @@ export default function DueDateEditorPopover({
     setOpen(false);
   }, [task.id, updateTask]);
 
-  /** 마감일 Date 객체 메모 */
+  // 마감일 Date 객체 메모
   const selectedDate = useMemo(() => {
     return task.dueDate ? new Date(task.dueDate) : undefined;
   }, [task.dueDate]);
